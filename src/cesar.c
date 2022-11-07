@@ -29,7 +29,7 @@ int decalage() {
 
 void cryptageCesar(char chaineCryptee[TAILLE_CHAINE]) {
 
-    int nbDecalage = decalage;
+    int nbDecalage = decalage();
 
     int signe;
     if(nbDecalage > 0) {

@@ -5,6 +5,7 @@
 #include "defines.h"
 
 void viderBuffer();
-void entreeChaine(char chaineACrypter[TAILLE_CHAINE]);
+// void entreeChaine(char chaineACrypter[TAILLE_CHAINE]);
+char* entreeChaine();
 
 #endif
