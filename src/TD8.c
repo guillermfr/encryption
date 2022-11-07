@@ -2,20 +2,25 @@
 
 int main(int argc, char** argv) {
     
-    // gestionNbParam(argc, argv);
+    gestionParam(argc, argv);
 
-    printf("Veuillez entrer la chaîne à crypter :\n");
-    // char chaineACrypter[TAILLE_CHAINE];
     char* chaineACrypter;
     char chaineCryptee[TAILLE_CHAINE];
+
+    printf("Veuillez entrer la chaîne à crypter :\n");
     chaineACrypter = entreeChaine();
     strcpy(chaineCryptee, chaineACrypter);
-    printf("Vous avez entré : \"%s\"\n", chaineACrypter);
-    // printf("Vous avez entré : \"%s\"\n", chaineCryptee);
     
-    cryptageCesar(chaineCryptee);
+    // cryptageCesar(chaineCryptee);
+    // printf("La chaîne cryptée est alors : \"%s\"\n", chaineCryptee);
 
-    printf("La chaîne cryptée est alors : \"%s\"\n", chaineCryptee);
+    // cryptageVigenere(chaineCryptee);
+    // printf("La chaîne cryptée est alors : \"%s\"\n", chaineCryptee);
+
+    // cryptageScytale(chaineCryptee);
+    // printf("La chaîne cryptée est alors : \"%s\"\n", chaineCryptee);
+
+    affichage(argv, chaineACrypter, chaineCryptee);
 
     free(chaineACrypter);
 

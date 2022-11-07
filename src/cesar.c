@@ -1,6 +1,6 @@
 #include "cesar.h"
 
-int decalage() {
+int decalageCesar() {
     printf("Veuillez entrer le décallage souhaité (minimum -25, maximum 25):\n");
 
     int erreur;
@@ -29,7 +29,7 @@ int decalage() {
 
 void cryptageCesar(char chaineCryptee[TAILLE_CHAINE]) {
 
-    int nbDecalage = decalage();
+    int nbDecalage = decalageCesar();
 
     int signe;
     if(nbDecalage > 0) {
@@ -42,7 +42,7 @@ void cryptageCesar(char chaineCryptee[TAILLE_CHAINE]) {
     for(int i = 0; i<strlen(chaineCryptee); i++) {
 
         for(int j = 0; j<nbDecalage; j++) {
-            chaineCryptee[i]+=signe;
+            if((chaineCryptee[i] > 96 && chaineCryptee[i] < 123) || (chaineCryptee[i] > 64 && chaineCryptee[i] < 91)) chaineCryptee[i]+=signe;
             if(chaineCryptee[i] == 64 || chaineCryptee[i] == 91 || chaineCryptee[i] == 96 || chaineCryptee[i] == 123) {
                 chaineCryptee[i] = chaineCryptee[i] - signe*26;
             }

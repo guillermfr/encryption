@@ -7,6 +7,6 @@
 #include "gestionChaine.h"
 
 void cryptageCesar(char chaineCryptee[TAILLE_CHAINE]);
-int decalage();
+int decalageCesar();
 
 #endif

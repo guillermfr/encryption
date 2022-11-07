@@ -5,11 +5,13 @@
 #include "defines.h"
 
 #include "gestionChaine.h"
-#include "gestionNombreParametres.h"
+#include "gestionParametres.h"
 #include "gestionErreur.h"
 
+#include "affichageCryptage.h"
 #include "cesar.h"
 #include "vigenere.h"
+#include "scytale.h"
 
 void messageErreur();
 
